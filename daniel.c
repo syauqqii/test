@@ -66,9 +66,6 @@ void input(int option);
 // Print Data
 void print();
 
-// Clear Console
-void clearScreen();
-
 /* --------------------------
 	Main Program Area
 -------------------------- */
@@ -82,8 +79,7 @@ int main(){
 
 		do{
 
-			// call clear console function
-			clearScreen();
+			system("cls||clear");
 
 			if(display == 1){
 				// call print function
@@ -479,20 +475,4 @@ void print(){
 
 	}
 	printf("   +-------+--------------------+--------------------+--------------------+---------------------+\n");
-}
-
-/* --------------------------
-	Clear Console Area
--------------------------- */
-void clearScreen(){
-	// if windows, then ..
-	#ifdef OS_Windows
-		// call system function with value cls, (command to clear console in windows)
-		system("cls");
-	// if not windows, then ..
-	#else
-		// call system function with value clear, (command to clear console in linux)
-		system("clear");
-	// end if
-	#endif
 }
