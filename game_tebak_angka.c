@@ -119,6 +119,15 @@ void mulai_bermain(){
 			
 			printf("\n [>] Tebak Angka : (%d..%d) ", dari, ke);
 			scanf("%d", &tebak);
+			
+			if(tebak > angka){
+			    printf("\n [>] Tebakan anda terlalu besar\n");
+			} else if(tebak < angka){
+			    printf("\n [>] Tebakan anda terlalu kecil\n");
+			}
+			
+			sleep(2);
+			
 		} while(tebak < dari || tebak > ke);
 		
 		if(tebak == angka){
